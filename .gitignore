@@ -1,0 +1,7 @@
+.idea/
+create_bot/telegram_token.py
+create_bot/users.db
+create_bot/vk_config.v2.json
+create_bot/__pycache__/
+bot_handlers/__pycache__/
+other/__pycache__/

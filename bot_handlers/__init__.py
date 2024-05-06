@@ -1,0 +1,3 @@
+from bot_handlers import main_handlers
+from bot_handlers import reg_handlers
+from bot_handlers import states_handlers
