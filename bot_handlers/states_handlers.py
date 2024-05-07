@@ -1,9 +1,8 @@
-from createbot import bot
+from create_bot.createbot import bot
 from other.imports import *
 from other.states import StatusReg
 
 db = Database(path_db_file='users.db')
-
 
 acc_token = Account()
 verify_acc = VerifyAccount()
@@ -40,8 +39,7 @@ async def captcha_over(msg: types.Message, state: FSMContext):
 
 
 async def status(msg: types.Message, state: FSMContext):
-    token = db.get_user_inf(user_id=msg.from_user.id)["token"]
-
+    login, password, token = db.get_user_inf(user_id=msg.from_user.id).values()
 
     response = acc_token.set_user_status(token=token, text=msg.text)
 

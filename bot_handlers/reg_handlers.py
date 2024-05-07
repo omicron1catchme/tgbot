@@ -1,6 +1,6 @@
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher.filters import Text
-from createbot import bot
+from create_bot.createbot import bot
 from other.imports import *
 from other.states import StatusReg, State, StatusStatus
 

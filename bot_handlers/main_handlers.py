@@ -1,5 +1,5 @@
 from other.imports import *
-from createbot import bot
+from create_bot.createbot import bot
 
 
 db = Database(path_db_file='users.db')
