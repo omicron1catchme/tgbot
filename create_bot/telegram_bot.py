@@ -5,7 +5,7 @@ import bot_handlers
 
 
 async def on_startup(_):
-    print('\n Bot was started!')
+    print('\nBot is running!')
 
 
 bot_handlers.reg_handlers.register_reg_handlers(dp=dp)
