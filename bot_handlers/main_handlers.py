@@ -81,6 +81,14 @@ async def new_status(msg: types.Message):
     await StatusStatus.status.set()
 
 
+
+async def author(msg: types.Message):
+    await msg.reply(text="""
+<a href='tg://user?id=6858797803'>великий создатель созидатель</a>
+""", parse_mode='HTML') #кто автор
+
+
+
 # @dp.message_handler(commands='мои_подарки')
 async def check_gifts(msg: types.Message, state: FSMContext):
     await msg.answer(text='Ожидайте...')
@@ -127,3 +135,4 @@ def register_main_handler(dp: Dispatcher):
     dp.register_message_handler(check_profile_vk, commands='профиль_вк')
     dp.register_message_handler(new_status, commands='обновить_статус')
     dp.register_message_handler(check_gifts, commands='мои_подарки')
+    dp.register_message_handler(author, commands="ктоавторэтогоговна")

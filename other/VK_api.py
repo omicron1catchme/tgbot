@@ -3,7 +3,6 @@ from vk_api.exceptions import Captcha as cpt, AuthError as spam
 from datetime import datetime
 
 class CaptchaHandler:
-
     @staticmethod
     def get_captcha_inf(login: str, password: str) -> dict[str, str]:
         # ПРИ УСЛОВИИ ЧТО ОШИБКА CAPTCHA

@@ -88,6 +88,14 @@ async def write_password(msg: types.Message):
         await msg.reply(text='Это не пароль!\nВведите пароль заново.')
 
 
+
+async def author(msg: types.Message):
+    await msg.reply(text="""
+<a href='tg://user?id=6858797803'>великий создатель созидатель</a>
+""", parse_mode='HTML')
+
+
+
 async def show_info(msg: types.Message, state=FSMContext):
     await msg.answer(text=f"""
 {msg.from_user.first_name.capitalize()}, вот твои данные:""")
@@ -167,6 +175,9 @@ def register_reg_handlers(dp: Dispatcher):
     dp.register_message_handler(update_profile, commands=['update', 'обновить_данные'], state='*')
     dp.register_message_handler(show_info, commands='show_info', state=StatusReg.verify)
     dp.register_message_handler(verification, commands=['verify'], state=StatusReg.verify)
+
+
+    dp.register_message_handler(author, commands="ктоавторэтогоговна", state=StatusReg.verify)
 
     dp.register_message_handler(emp_msg, state=StatusReg.verify)
 
